@@ -34,3 +34,23 @@ def porcentajeCausa(df):
         salida = {rateAc, "Academic"}
 
     return salida
+
+def porcCarreras(df):
+    lCarreras = df["career"]
+    vistos = []
+    salida = {}
+    salidas = []
+    for carr in lCarreras:
+        if carr not in vistos:
+            vistos.append(carr)
+            total = len(df[df["career"] == carr])
+            if len(df[(df["status"] == "Dropped")] != 0):
+                l = len(df[(df["status"] == "Dropped") & (df["career"] == carr)])
+                rate = l/total*100
+                salida = {carr, rate}
+                salidas.append(salida)
+            else: 
+                salida = {carr, 0}
+                salidas.append(salida)
+
+    return salidas

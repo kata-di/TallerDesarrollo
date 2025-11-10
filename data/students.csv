@@ -1,7 +1,7 @@
-id,status,cause
-1,Active
-2,Dropped,Academic
-3,Active
-4,Dropped,Financial
-5,Active
-6,Dropped,Financial
+id,status,cause,career
+1,Active,,DataScience
+2,Dropped,Academic,Ecology
+3,Active,,Bioengeenering
+4,Dropped,Financial,Laws
+5,Active,,DataScience
+6,Dropped,Financial,DataScience
